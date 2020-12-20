@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__principal">
+        <img src="https://img.icons8.com/dusk/96/000000/brain.png" />
+        <h1>Simon Says</h1>
+      </div>
+      <h1 class="header__level" id="level">Level: 0</h1>
+    </header>
+    <div class="gameboard">
+      <div id="blue" class="color blue left" data-color="blue"></div>
+      <div id="red" class="color red right" data-color="red"></div>
+      <div id="yellow" class="color yellow left" data-color="yellow"></div>
+      <div id="green" class="color green right" data-color="green"></div>
+      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">
+        Iniciar el juego!
+      </button>
+    </div>
+    <footer class="footer">
+      <h4>
+        Hecho con amor por Jose Garcia ❤
+      </h4>
+      <div class="social">
+        <a
+          href="https://github.com/JoseGarcia2001/Simon_Says"
+          class="social-link github"
+        ></a>
+        <a href="https://twitter.com/Joga_Dev" class="social-link twitter"></a>
+        <a
+          href="https://www.linkedin.com/in/jose-anibal-garcia-giraldo-2a56b31a4/"
+          class="social-link linkedin"
+        ></a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

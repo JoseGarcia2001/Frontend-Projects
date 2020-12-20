@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  background: linear-gradient(#569fc2, #3d7ebf);
+  font-family: "MuseoModerno", cursive;
+  color: white;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+}
+
+.header__principal {
+  display: flex;
+  align-items: center;
+}
+
+.header__level {
+  margin-right: 42px;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  margin-left: 42px;
+  margin-right: 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 75px;
+}
+
+.gameboard {
+  height: calc(100vh - 300px);
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  max-height: 60vh;
+  max-width: 60vh;
+}
+
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: left;
+}
+
+.blue {
+  background: #1b6ca8;
+}
+
+.blue.light {
+  background: rgba(27, 108, 168, 0.1);
+}
+
+.red {
+  background: #e71414;
+}
+
+.red.light {
+  background: rgba(231, 20, 20, 0.2);
+}
+
+.yellow {
+  background: #fcf508;
+}
+
+.yellow.light {
+  background: rgba(252, 245, 8, 0.2);
+}
+
+.green {
+  background: #79d70f;
+}
+
+.green.light {
+  background: rgba(121, 215, 15, 0.1);
+}
+
+.btn-start {
+  font-family: "MuseoModerno", cursive;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 520px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  font-size: 3.8rem;
+  position: absolute;
+  top: calc(50% - 38px);
+  left: calc(50% - 262px);
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+}
+
+.social {
+  margin-right: 55px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  margin: 0 10px;
+}
+
+.social-link.github {
+  background-image: url("assets/github.svg");
+}
+
+.social-link.twitter {
+  background-image: url("assets/twitter.svg");
+}
+.social-link.linkedin {
+  background-image: url("assets/icons8-linkedin-50.png");
+}
+
+h4 {
+  margin: 0 55px;
+}
