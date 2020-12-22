@@ -345,10 +345,19 @@ header img {
   width: 100%;
   height: auto;
   background-color: var(--off-white);
+  padding-bottom: 64px;
+}
+
+.plans__slider {
+  display: flex;
+  height: 300px;
+  overflow-x: scroll;
+  align-items: center;
+  scroll-snap-type: x proximity;
 }
 
 .plans__principal-text {
-  padding: 64px 16px 0 16px;
+  padding: 64px 16px 50px 16px;
   text-align: center;
 }
 
@@ -364,4 +373,98 @@ header img {
   color: #757575;
   font-size: 1.4rem;
   line-height: 1.8rem;
+}
+
+.plans-slider__card {
+  scroll-snap-align: center;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  width: 65%;
+  min-width: 190px;
+  max-width: 250px;
+  height: 247px;
+  background-color: var(--just-white);
+  margin: 0 8px;
+  padding: 31px 17px 24px;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 8px;
+}
+
+.slider-card__type-plan {
+  position: absolute;
+  bottom: calc(100% - 15px);
+  right: calc(50% - 50.25px);
+  width: 100px;
+  color: var(--just-white);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  line-height: 1.4rem;
+}
+
+.recommended {
+  background-color: var(--bitcoin-orange);
+}
+
+.basic {
+  background-color: var(--secondary-blue);
+}
+
+.professional {
+  background-color: #757575;
+}
+
+.slider-card__info {
+  font-family: var(--secondary-font);
+  color: black;
+}
+
+.slider-card__info h3 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+.slider-card__info .info__price {
+  font-size: 5.2rem;
+  font-weight: bold;
+}
+
+.slider-card__info .info__price span {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  vertical-align: 2.4rem;
+}
+
+.slider-card__info .info__saving {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  margin-top: 8px;
+  color: #757575;
+}
+
+.plans-slider__card button {
+  padding: 10px 16px;
+  margin-top: 16px;
+  border: 2px solid var(--bitcoin-orange);
+  font-family: var(--principal-font);
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  color: var(--warm-black);
+  background-color: var(--off-white);
+  border-radius: 4px;
+}
+
+.plans-slider__card button span {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-image: url("./assets/icons/orange-right-arrow.svg");
+  margin-left: 8px;
+  vertical-align: middle;
 }
