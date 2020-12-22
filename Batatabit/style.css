@@ -91,3 +91,277 @@ header img {
   background-image: url(./assets/icons/down-arrow.svg);
   background-repeat: no-repeat;
 }
+
+.main-exchange-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.exchange-container__img {
+  width: 195px;
+  height: 195px;
+  margin-top: 59px;
+}
+
+.exchange-container__text {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: auto;
+  margin-top: 40px;
+}
+
+.exchange-container__text h2 {
+  color: var(--warm-black);
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+}
+
+.exchange-container__text p {
+  margin-top: 24px;
+  color: #757575;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.exchange-tables {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  min-width: 225px;
+  max-width: 500px;
+  margin-top: 48px;
+  margin-bottom: 64px;
+  font-family: var(--secondary-font);
+}
+
+.first-table .table-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff9536;
+  text-align: left;
+  line-height: 2.3rem;
+  padding-left: 12px;
+}
+
+.table-container {
+  width: 90%;
+  min-width: 205px;
+  max-width: 300px;
+  height: 160px;
+  margin-bottom: 16px;
+  margin-top: 12px;
+  background-color: var(--just-white);
+}
+
+.table-container table {
+  width: 100%;
+  height: 100%;
+}
+
+.table-container td {
+  width: 50%;
+  padding-left: 12px;
+  text-align: left;
+}
+
+.table-field-left {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #b5b0ac;
+}
+
+.table-field-right {
+  font-size: 1.4rem;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #757575;
+}
+
+.top-left {
+  border-radius: 8px 0 0 0;
+}
+
+.top-right {
+  border-radius: 0 8px 0 0;
+}
+
+.bottom-right {
+  border-radius: 0 0 8px 0;
+}
+
+.bottom-left {
+  border-radius: 0 0 0 8px;
+}
+
+.table-field-right span {
+  display: inline-block;
+  margin-left: 15px;
+  width: 12px;
+  height: 12px;
+}
+
+.table-field-right .down {
+  background-image: url("./assets/icons/trending-down.svg");
+}
+
+.table-field-right .up {
+  background-image: url("./assets/icons/trending-up.svg");
+}
+
+.exchange__updated-date {
+  width: 190px;
+  height: 31px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: var(--soft-orange);
+}
+
+.exchange__updated-date p {
+  padding: 7px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--black);
+}
+
+.main-benefits-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: var(--warm-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits__separator-icon {
+  position: absolute;
+  bottom: calc(100% - 12px);
+  width: 37.5px;
+  height: 24px;
+  background-image: url("./assets/icons/batata.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.benefits__main-text {
+  text-align: center;
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin-top: 64px;
+}
+
+.benefits__main-text h2 {
+  color: var(--just-white);
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+}
+
+.benefits__main-text p {
+  margin-top: 24px;
+  color: #808080;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+.benefits-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 320px;
+  margin-top: 16px;
+  margin-bottom: 47px;
+  padding: 0 20px;
+}
+
+.benefits__card {
+  width: 90%;
+  min-width: 288px;
+  max-width: 300px;
+  height: auto;
+  background-color: var(--black);
+  margin-top: 16px;
+  padding: 14px 20px 22px 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+}
+
+.benefits__card-image {
+  width: 24px;
+  height: 24px;
+}
+
+.benefits__card-text h3 {
+  color: var(--just-white);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  margin-top: 10px;
+}
+
+.benefits__card-text p {
+  margin-top: 10px;
+  color: #808080;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+.main-bitcoinbaby-container {
+  width: 100%;
+  min-width: 320px;
+  height: 50vh;
+  background-image: url("./assets/img/bitcoinbaby2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-bitcoinbaby-container h2 {
+  color: var(--just-white);
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  text-align: center;
+  padding-top: 64px;
+}
+
+.main-plans-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+.plans__principal-text {
+  padding: 64px 16px 0 16px;
+  text-align: center;
+}
+
+.plans__principal-text h2 {
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  color: var(--warm-black);
+}
+
+.plans__principal-text p {
+  margin-top: 24px;
+  color: #757575;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
