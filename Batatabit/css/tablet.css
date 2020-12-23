@@ -1,0 +1,58 @@
+header img {
+  width: 350px !important;
+  height: 56px !important;
+  margin: 50px auto !important;
+}
+
+.header__title-container h1,
+h2 {
+  font-size: 4rem !important;
+  line-height: 4.2rem !important;
+}
+
+.header__title-container p,
+.exchange-container__text p,
+.benefits__main-text p,
+.plans__principal-text p,
+footer a {
+  font-size: 2rem !important;
+  line-height: 2.4rem !important;
+}
+
+.plans__slider {
+  justify-content: center;
+  overflow-x: hidden !important;
+}
+
+.header__title-container {
+  margin-bottom: 120px !important;
+}
+
+.exchange-container__img {
+  width: 250px !important;
+  height: 250px !important;
+}
+
+.exchange-tables {
+  justify-content: center;
+  gap: 60px !important;
+  overflow-x: hidden !important;
+}
+
+.first-table {
+  margin: 0 !important;
+}
+
+.footer__logo img {
+  width: 105px !important;
+  height: 53px !important;
+}
+
+.footer__logo p {
+  margin-top: 17px;
+  font-size: 1.8rem !important;
+}
+
+.footer__rights {
+  font-size: 1.5rem !important;
+}

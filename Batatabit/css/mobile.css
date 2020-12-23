@@ -22,6 +22,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   font-family: var(--principal-font);
 }
@@ -31,15 +32,16 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   min-width: 320px;
-  height: 334px;
+  /* height: 334px; */
   text-align: center;
   background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
 }
 
 header img {
-  width: 150px;
+  width: 151px;
   height: 24px;
   margin-top: 42px;
 }
@@ -47,9 +49,10 @@ header img {
 .header__title-container {
   width: 90%;
   min-width: 288px;
-  max-width: 900px;
-  height: 218px;
+  max-width: 490px;
+  height: 21 8px;
   margin-top: 36px;
+  margin-bottom: 60px;
 }
 
 .header__title-container h1 {
@@ -88,7 +91,7 @@ header img {
   width: 12px;
   height: 7.5px;
   margin-left: 14px;
-  background-image: url(./assets/icons/down-arrow.svg);
+  background-image: url("../assets/icons/down-arrow.svg");
   background-repeat: no-repeat;
 }
 
@@ -136,6 +139,7 @@ header img {
   display: flex;
   gap: 30px;
   overflow-x: scroll;
+  scroll-snap-type: x proximity;
   width: 70%;
   min-width: 225px;
   max-width: 500px;
@@ -164,6 +168,7 @@ header img {
 }
 
 .table-container {
+  scroll-snap-align: center;
   width: 90%;
   min-width: 205px;
   max-width: 300px;
@@ -224,11 +229,11 @@ header img {
 }
 
 .table-field-right .down {
-  background-image: url("./assets/icons/trending-down.svg");
+  background-image: url("../assets/icons/trending-down.svg");
 }
 
 .table-field-right .up {
-  background-image: url("./assets/icons/trending-up.svg");
+  background-image: url("../assets/icons/trending-up.svg");
 }
 
 .exchange__updated-date {
@@ -268,7 +273,7 @@ header img {
   bottom: calc(100% - 12px);
   width: 37.5px;
   height: 24px;
-  background-image: url("./assets/icons/batata.svg");
+  background-image: url("../assets/icons/batata.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -298,10 +303,12 @@ header img {
 
 .benefits-cards-container {
   display: flex;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   min-width: 320px;
+  max-width: 930px;
   margin-top: 16px;
   margin-bottom: 47px;
   padding: 0 20px;
@@ -310,10 +317,9 @@ header img {
 .benefits__card {
   width: 90%;
   min-width: 288px;
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
   background-color: var(--black);
-  margin-top: 16px;
   padding: 14px 20px 22px 16px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
@@ -344,7 +350,7 @@ header img {
   width: 100%;
   min-width: 320px;
   height: 50vh;
-  background-image: url("./assets/img/bitcoinbaby2x.png");
+  background-image: url("../assets/img/bitcoinbaby2x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -368,6 +374,7 @@ header img {
 
 .plans__slider {
   display: flex;
+  margin: 0 16px;
   height: 300px;
   overflow-x: scroll;
   align-items: center;
@@ -482,22 +489,21 @@ header img {
   display: inline-block;
   height: 24px;
   width: 24px;
-  background-image: url("./assets/icons/orange-right-arrow.svg");
+  background-image: url("../assets/icons/orange-right-arrow.svg");
   margin-left: 8px;
   vertical-align: middle;
 }
 
 footer {
   width: 100%;
-  height: 160px;
   background-color: var(--bitcoin-orange);
+  padding-bottom: 8px;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 0 60px;
   padding-top: 40px;
 }
 
