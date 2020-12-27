@@ -543,3 +543,36 @@ footer {
   margin-top: 27px;
   font-size: 1.2rem;
 }
+
+.prueba-tabla {
+  background-color: var(--soft-orange);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* width: 100%; */
+}
+
+.prueba-tabla > p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff9536;
+}
+
+.prueba-tabla div {
+  width: 200px;
+  height: 190px;
+  margin: 10px 0;
+  /* background-color: #ffffff; */
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.prueba-tabla div p {
+  color: red;
+}
