@@ -156,6 +156,7 @@ body {
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   position: relative;
+  font-family: var(--secondary-font);
 }
 
 .movie-card img {
@@ -176,11 +177,22 @@ body {
   background-color: rgba(255, 86, 93, 0.7);
 }
 
+.message-container {
+  position: fixed;
+  width: 250px;
+  top: calc(50vh - 150px);
+  left: calc(50% - 125px);
+}
+
+.message-info__container {
+  position: fixed;
+  width: 250px;
+  top: calc(50vh - 150px);
+  left: calc(50% - 125px);
+}
+
 .movie-message {
-  position: absolute;
-  left: calc(50% - 35%);
-  width: 70%;
-  top: calc(50vh - 109px);
+  font-size: 1.3rem;
   background-color: var(--dark-pink);
   color: white;
   padding: 25px;
@@ -189,10 +201,33 @@ body {
   box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.25);
 }
 
+.info {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 13px;
+  height: 13px;
+  background-image: url("../close.png");
+  background-repeat: no-repeat;
+}
+
+.movie-message h3 {
+  color: white;
+}
+
 .movie-message p {
   margin-top: 14px;
 }
 
+.images-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
 .movie-message img {
-  margin-top: 40px;
+  cursor: pointer;
+  margin-top: 30px;
 }
