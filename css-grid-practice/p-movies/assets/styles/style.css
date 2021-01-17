@@ -115,6 +115,10 @@ body {
   cursor: pointer;
 }
 
+.profile-photo {
+  width: 29px;
+}
+
 .profile-options {
   display: none;
 }
