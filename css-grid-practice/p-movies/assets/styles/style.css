@@ -100,6 +100,7 @@ body {
 
 .header__logo {
   height: 18px;
+  width: 100%;
 }
 
 .header__profile {
