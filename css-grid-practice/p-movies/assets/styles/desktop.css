@@ -10,6 +10,7 @@
 
 .header__logo {
   width: 150px;
+  margin: 15px 0 15px 10px;
 }
 
 .header__icon-menu {
@@ -18,11 +19,6 @@
 
 .header__logo-a {
   justify-self: start;
-}
-
-.header__logo {
-  height: 29px;
-  margin: 15px 0 15px 10px;
 }
 
 .header__input {
