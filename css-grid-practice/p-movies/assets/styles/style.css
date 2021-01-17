@@ -95,11 +95,10 @@ body {
 
 .header__logo-a {
   justify-self: center;
-  width: 90px;
 }
 
 .header__logo {
-  width: 100%;
+  width: 100px;
 }
 
 .header__profile {
