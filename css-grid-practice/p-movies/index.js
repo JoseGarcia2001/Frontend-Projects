@@ -1,4 +1,64 @@
-if (document.body.clientWidth <= 425) {
+// Inserción de películas
+
+function insertMovies(element, nMovies) {
+  element.forEach((e) => {
+    for (let index = 0; index < nMovies; index++) {
+      e.insertAdjacentHTML(
+        "beforeend",
+        `
+          <div class="movie-card">
+            <div class="movie-card__overlay  animate__animated animate__fadeIn">
+              <h3>The Night</h3>
+              <p>Quam tempus lobortis purus quisque cum natoque tempus. Mauris turpis
+              sociis bibendum ultricies platea cras tellus. Eu, a tincidunt aliquet
+              orci urna, faucibus etiam nunc integer.</p>
+              <div class="overlay-buttons">
+                <img src="./assets/play.png" alt="Play">
+                <img src="./assets/ant-design_plus-circle-filled.png" alt="Más">
+                <img src="./assets/danger.png" alt="Info">
+            </div>
+            </div>
+              <img class="card-image" src="./assets/movie.jpg" alt="Cover de la película" />
+              <p class="card-description">The Night</p>
+            </div>
+        `
+      );
+    }
+  });
+}
+
+const $moviesContainer = document.querySelectorAll(".movies__container");
+insertMovies($moviesContainer, 15);
+
+// Acciones del desarrollo móvil.
+
+const infoMessage = `
+        <div class="movie-message animate__animated animate__bounceIn">
+          <span class="info personal"></span>
+          <h3>Oops!</h3>
+          <p>
+          Hola! Soy Jose Garcia, el diseñador y maquetador de esta Web.<br />
+          Este es un sitio estático. Fué creado con fines educativos, sin embargo
+          gracias por visistarlo!<br />
+          <br />
+          Si quieres saber un poco más de mi, mis proyectos o contactarme, visita
+          mis redes sociales o bien el repo del proyecto para ver el código. 😄
+        </p>
+        <div class="images-container .media">
+          <a href="https://www.linkedin.com/in/jose-gg/" target="_blank">
+            <img src="./assets/brandico_linkedin-rect.png" alt="Play" />
+          </a>
+          <a href="https://twitter.com/Joga_Dev" target="_blank">
+            <img src="./assets/ant-design_twitter-circle-filled.png" alt="Más" />
+          </a>
+          <a href="https://github.com/JoseGarcia2001/Frontend-Projects/tree/main/css-grid-practice/p-movies" target="_blank">
+            <img src="./assets/ant-design_github-filled.png" alt="Información" />
+          </a>
+        </div>
+        </div>
+      `;
+
+if (document.body.clientWidth < 768) {
   const $hamburgerBtn = document.querySelector(".header__icon-menu");
   const $arrowBtn = document.querySelector(".header__profile");
   const $main = document.querySelector(".movies");
@@ -56,37 +116,12 @@ if (document.body.clientWidth <= 425) {
     }
   });
 
-  const infoMessage = `
-        <div class="movie-message animate__animated animate__bounceIn">
-          <span class="info personal"></span>
-          <h3>Oops!</h3>
-          <p>
-          Hola! Soy Jose Garcia, el diseñador y maquetador de esta Web.<br />
-          Este es un sitio estático. Fué creado con fines educativos, sin embargo
-          gracias por visistarlo!<br />
-          <br />
-          Si quieres saber un poco más de mi, mis proyectos o contactarme, visita
-          mis redes sociales. 😄
-        </p>
-        <div class="images-container .media">
-          <a href="https://www.linkedin.com/in/jose-gg/" target="_blank">
-            <img src="./assets/brandico_linkedin-rect.png" alt="Play" />
-          </a>
-          <a href="https://twitter.com/Joga_Dev" target="_blank">
-            <img src="./assets/ant-design_twitter-circle-filled.png" alt="Más" />
-          </a>
-          <a href="https://github.com/JoseGarcia2001" target="_blank">
-            <img src="./assets/ant-design_github-filled.png" alt="Información" />
-          </a>
-        </div>
-        </div>
-      `;
-
   document.addEventListener("click", (e) => {
     if (
       e.target.matches("ul li img") ||
       e.target.matches("ul li p") ||
-      e.target.matches("ul li")
+      e.target.matches("ul li") ||
+      e.target.matches("div .profile-options")
     ) {
       $infoMessage.innerHTML = infoMessage;
       $main.style.opacity = "0.5";
@@ -162,4 +197,29 @@ if (document.body.clientWidth <= 425) {
       }
     });
   });
+} else {
+  function openMessage(arrayOfElements) {
+    const $infoMessage = document.querySelector(".message-info__container");
+
+    arrayOfElements.forEach((e) => {
+      e.addEventListener("click", () => {
+        $infoMessage.innerHTML = infoMessage;
+        const $closeWindow = document.querySelector(".info.personal");
+        $closeWindow.addEventListener("click", () => {
+          $infoMessage.innerHTML = "";
+        });
+      });
+    });
+  }
+
+  const $movieCard_Overlay = document.querySelectorAll(
+    ".movie-card__overlay img"
+  );
+  openMessage($movieCard_Overlay);
+
+  const $asideButtons = document.querySelectorAll(".nav-item");
+  openMessage($asideButtons);
+
+  const $headerButtons = document.querySelectorAll(".profile-options img");
+  openMessage($headerButtons);
 }

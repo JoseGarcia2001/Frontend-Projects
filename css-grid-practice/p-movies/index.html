@@ -9,8 +9,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/styles/animations.css" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link
+      rel="stylesheet"
+      media="(min-width: 768px)"
+      href="./assets/styles/desktop.css"
+    />
     <title>MyMovies</title>
   </head>
   <body>
@@ -42,23 +48,23 @@
           <p>Ajustes</p>
         </li>
       </ul>
-      <a href="./index.html">
-        <img src="./assets/logo.png" alt="Logo" class="header__logo" />
-      </a>
-      <div class="header__profile">
-        <svg
-          class="profile-arrow"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M2 5.56L2.413 5H13.607L14 5.54L8.373 11H7.546L2 5.56Z"
-            fill="white"
+      <a href="./index.html" class="header__logo-a">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/Logo-pink.png"
+            class="header__logo"
           />
-        </svg>
+          <img src="./assets/logo.png" alt="Logo" class="header__logo" />
+        </picture>
+      </a>
+      <input type="text" placeholder="¿Que verás hoy?" class="header__input" />
+      <div class="header__profile">
+        <img
+          src="./assets/down-arrow.png"
+          alt="Down Arrow"
+          class="profile-arrow"
+        />
         <img
           src="./assets/person.png"
           class="profile-photo"
@@ -82,121 +88,49 @@
           <p>Subscripción</p>
         </li>
       </ul>
+      <div class="profile-options">
+        <img src="./assets/price-tag-pink.png" alt="Compras" />
+        <img src="./assets/config-pink.png" alt="config" />
+        <img src="./assets/face-pink.png" alt="profile" />
+      </div>
     </header>
-    <main class="movies">
-      <section>
-        <h3>Ahora en Cines</h3>
-        <div class="movies__container">
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
+    <div class="content-container">
+      <aside class="side-bar">
+        <div class="nav-options">
+          <div class="nav-item">
+            <img src="./assets/heart.png" alt="Favoritos" />
+            <p>Fav</p>
           </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
+          <div class="nav-item">
+            <img src="./assets/home.png" alt="Home" />
+            <p>Home</p>
           </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
+          <div class="nav-item">
+            <img src="./assets/fire.png" alt="Top" />
+            <p>Top</p>
           </div>
         </div>
-      </section>
-      <section>
-        <h3>Lo mejor en Colombia</h3>
-        <div class="movies__container">
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
+        <div class="nav-item">
+          <img src="./assets/config.png" alt="Configuración" />
+          <p>Ajustes</p>
         </div>
-      </section>
-      <section>
-        <h3>Próximos estrenos</h3>
-        <div class="movies__container">
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
+      </aside>
+      <main class="movies">
+        <section>
+          <div class="movies__container">
+            <h3>Ahora en cines</h3>
           </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-          <div class="movie-card">
-            <img src="./assets/movie.jpg" alt="Cover de la película" />
-            <p>The Night</p>
-          </div>
-        </div>
-        >
-      </section>
-    </main>
+        </section>
+        <section>
+          <div class="movies__container">
+            <h3>Lo mejor en Colombia</h3>
+        </section>
+        <section>
+          <div class="movies__container">
+            <h3>Próximos estrenos</h3>
+        </section>
+      </main>
+    </div>
     <div class="message-container"></div>
     <div class="message-info__container"></div>
     <script src="./index.js"></script>

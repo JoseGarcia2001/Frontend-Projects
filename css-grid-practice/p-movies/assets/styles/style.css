@@ -42,10 +42,10 @@ body {
 .header {
   background-color: var(--principal-pink);
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
@@ -56,6 +56,7 @@ body {
   height: 20px;
   margin-left: 15px;
   cursor: pointer;
+  justify-self: left;
 }
 
 .header__menu {
@@ -73,6 +74,10 @@ body {
   pointer-events: none;
 }
 
+.header__input {
+  display: none;
+}
+
 .menu__item {
   display: flex;
   align-items: center;
@@ -88,6 +93,11 @@ body {
   margin-top: 20px;
 }
 
+.header__logo-a {
+  justify-self: center;
+  width: 90px;
+}
+
 .header__logo {
   height: 18px;
 }
@@ -96,6 +106,7 @@ body {
   display: flex;
   align-items: center;
   margin: 10px 15px 10px 0px;
+  justify-self: right;
 }
 
 .profile-arrow {
@@ -103,6 +114,10 @@ body {
   width: 16px;
   height: 16px;
   cursor: pointer;
+}
+
+.profile-options {
+  display: none;
 }
 
 .profile__menu {
@@ -131,6 +146,10 @@ body {
 
 /* Estilos del main */
 
+aside {
+  display: none;
+}
+
 .movies {
   display: grid;
   grid-template-columns: minmax(280px, auto);
@@ -143,6 +162,8 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 16px;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
 }
 
 .movies__container {
@@ -157,15 +178,16 @@ body {
   border-radius: 3px;
   position: relative;
   font-family: var(--secondary-font);
+  cursor: pointer;
 }
 
-.movie-card img {
+.card-image {
   vertical-align: top;
   width: 100%;
   border-radius: 3px;
 }
 
-.movie-card p {
+.card-description {
   font-size: 1.2rem;
   border-radius: 3px;
   color: var(--soft-pink);
@@ -186,6 +208,7 @@ body {
 
 .message-info__container {
   position: fixed;
+  z-index: 5;
   width: 250px;
   top: calc(50vh - 150px);
   left: calc(50% - 125px);
@@ -230,4 +253,26 @@ body {
 .movie-message img {
   cursor: pointer;
   margin-top: 30px;
+}
+
+.movie-card__overlay {
+  display: none;
+}
+
+/* Scroll Bar */
+.movies::-webkit-scrollbar {
+  height: 90%;
+  width: 10px;
+  background-color: #f1a0a3;
+}
+
+.movies::-webkit-scrollbar-thumb {
+  background-color: #ff565d;
+  border-radius: 4px;
+}
+
+@media (min-width: 500px) {
+  .movies__container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+  }
 }

@@ -1,0 +1,125 @@
+.header {
+  position: sticky;
+  background-color: #fff6f6;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 62px;
+  justify-content: space-between;
+  margin-bottom: 0;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.header__icon-menu {
+  display: none;
+}
+
+.header__logo-a {
+  justify-self: start;
+}
+
+.header__logo {
+  height: 29px;
+  margin: 15px 0 15px 10px;
+}
+
+.header__input {
+  display: block;
+  width: 100%;
+  padding: 9px 15px;
+  border: 1px solid var(--principal-pink);
+  border-radius: 10px;
+  color: var(--principal-pink);
+  font-family: var(--secondary-font);
+}
+
+.header__input::placeholder {
+  text-align: center;
+  color: var(--principal-pink);
+  font-family: var(--secondary-font);
+}
+
+.header__profile {
+  display: none;
+}
+
+.profile-options {
+  margin-right: 20px;
+  display: flex;
+  gap: 10px;
+  justify-self: end;
+}
+
+.profile-options img {
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.content-container {
+  display: flex;
+  height: calc(100vh - 62px);
+  overflow: hidden;
+}
+
+.side-bar {
+  font-family: var(--secondary-font);
+  font-size: 1.3rem;
+  color: white;
+  background-color: var(--principal-pink);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80px;
+  align-items: center;
+  padding: 20px 0 13px 0;
+}
+
+.side-bar .nav-item {
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.movies {
+  overflow: auto;
+  width: calc(100% - 80px);
+  padding-top: 20px;
+}
+
+.movies__container {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 230px));
+  grid-template-rows: 20px;
+}
+
+.movies__container h3 {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+.movie-card__overlay {
+  padding: 9px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 86, 93, 0.9);
+}
+
+.movie-card:hover .movie-card__overlay {
+  display: flex;
+}
+
+.movie-card__overlay h3 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.movie-card__overlay p {
+  margin-bottom: 10px;
+}
