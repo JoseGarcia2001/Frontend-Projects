@@ -29,6 +29,7 @@
   border-radius: 10px;
   color: var(--principal-pink);
   font-family: var(--secondary-font);
+  outline: none;
 }
 
 .header__input::placeholder {

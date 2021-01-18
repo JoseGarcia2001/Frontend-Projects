@@ -58,93 +58,94 @@ const infoMessage = `
         </div>
       `;
 
-if (document.body.clientWidth < 768) {
-  const $hamburgerBtn = document.querySelector(".header__icon-menu");
-  const $arrowBtn = document.querySelector(".header__profile");
-  const $main = document.querySelector(".movies");
-  const $movieCard = document.querySelectorAll(".movie-card");
+// Lógica Mobile
 
-  const $menu = document.querySelector(".header__menu");
-  const $profileMenu = document.querySelector(".profile__menu");
-  const $message = document.querySelector(".message-container");
-  const $infoMessage = document.querySelector(".message-info__container");
+const $hamburgerBtn = document.querySelector(".header__icon-menu");
+const $arrowBtn = document.querySelector(".header__profile");
+const $main = document.querySelector(".movies");
+const $movieCard = document.querySelectorAll(".movie-card");
 
-  $hamburgerBtn.addEventListener("click", () => {
-    if ($profileMenu.classList.contains("active-menu")) {
-      $profileMenu.classList.remove("active-menu");
-      $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
-    }
+const $menu = document.querySelector(".header__menu");
+const $profileMenu = document.querySelector(".profile__menu");
+const $message = document.querySelector(".message-container");
+const $infoMessage = document.querySelector(".message-info__container");
 
-    if (
-      document.querySelector(".movie-message") ||
-      document.querySelector("info")
-    ) {
-      $message.innerHTML = "";
+$hamburgerBtn.addEventListener("click", () => {
+  if ($profileMenu.classList.contains("active-menu")) {
+    $profileMenu.classList.remove("active-menu");
+    $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
+  }
+
+  if (
+    document.querySelector(".movie-message") ||
+    document.querySelector("info")
+  ) {
+    $message.innerHTML = "";
+    $infoMessage.innerHTML = "";
+  }
+
+  $menu.classList.toggle("active-menu");
+  $menu.classList.add("animate__animated", "animate__fadeIn");
+
+  if ($menu.classList.contains("active-menu")) {
+    $main.style.opacity = "0.50";
+  } else {
+    $main.style.removeProperty("opacity");
+    $menu.classList.remove("animate__animated", "animate__fadeIn");
+  }
+});
+
+$arrowBtn.addEventListener("click", () => {
+  if ($menu.classList.contains("active-menu")) {
+    $menu.classList.remove("active-menu");
+    $menu.classList.remove("animate__animated", "animate__fadeIn");
+  }
+
+  if (document.querySelector(".movie-message")) {
+    $message.innerHTML = "";
+    $infoMessage.innerHTML = "";
+  }
+
+  $profileMenu.classList.toggle("active-menu");
+  $profileMenu.classList.add("animate__animated", "animate__fadeIn");
+
+  if ($profileMenu.classList.contains("active-menu")) {
+    $main.style.opacity = "0.50";
+  } else {
+    $main.style.removeProperty("opacity");
+    $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    e.target.matches("ul li img") ||
+    e.target.matches("ul li p") ||
+    e.target.matches("ul li") ||
+    e.target.matches("div .profile-options")
+  ) {
+    $infoMessage.innerHTML = infoMessage;
+    $main.style.opacity = "0.5";
+    const $closeWindow = document.querySelector(".info.personal");
+    $closeWindow.addEventListener("click", () => {
       $infoMessage.innerHTML = "";
-    }
+      $main.style.opacity = "1";
+    });
+    $menu.classList.remove("active-menu");
+    $menu.classList.remove("animate__animated", "animate__fadeIn");
+    $profileMenu.classList.remove("active-menu");
+    $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
+    $main.style.removeProperty("opacity");
+  }
+});
 
-    $menu.classList.toggle("active-menu");
-    $menu.classList.add("animate__animated", "animate__fadeIn");
-
-    if ($menu.classList.contains("active-menu")) {
-      $main.style.opacity = "0.50";
-    } else {
-      $main.style.removeProperty("opacity");
-      $menu.classList.remove("animate__animated", "animate__fadeIn");
-    }
-  });
-
-  $arrowBtn.addEventListener("click", () => {
-    if ($menu.classList.contains("active-menu")) {
-      $menu.classList.remove("active-menu");
-      $menu.classList.remove("animate__animated", "animate__fadeIn");
-    }
-
+$movieCard.forEach((e) => {
+  e.addEventListener("click", (e) => {
     if (document.querySelector(".movie-message")) {
       $message.innerHTML = "";
-      $infoMessage.innerHTML = "";
-    }
-
-    $profileMenu.classList.toggle("active-menu");
-    $profileMenu.classList.add("animate__animated", "animate__fadeIn");
-
-    if ($profileMenu.classList.contains("active-menu")) {
-      $main.style.opacity = "0.50";
+      $main.style.opacity = "1";
     } else {
-      $main.style.removeProperty("opacity");
-      $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
-    }
-  });
-
-  document.addEventListener("click", (e) => {
-    if (
-      e.target.matches("ul li img") ||
-      e.target.matches("ul li p") ||
-      e.target.matches("ul li") ||
-      e.target.matches("div .profile-options")
-    ) {
-      $infoMessage.innerHTML = infoMessage;
-      $main.style.opacity = "0.5";
-      const $closeWindow = document.querySelector(".info.personal");
-      $closeWindow.addEventListener("click", () => {
-        $infoMessage.innerHTML = "";
-        $main.style.opacity = "1";
-      });
-      $menu.classList.remove("active-menu");
-      $menu.classList.remove("animate__animated", "animate__fadeIn");
-      $profileMenu.classList.remove("active-menu");
-      $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
-      $main.style.removeProperty("opacity");
-    }
-  });
-
-  $movieCard.forEach((e) => {
-    e.addEventListener("click", (e) => {
-      if (document.querySelector(".movie-message")) {
-        $message.innerHTML = "";
-        $main.style.opacity = "1";
-      } else {
-        $message.innerHTML = `<div class="movie-message animate__animated animate__bounceIn">
+      $message.innerHTML = `<div class="movie-message animate__animated animate__bounceIn">
           <span class="info" ></span>
           <h3>The Night</h3>
           <p>
@@ -159,67 +160,68 @@ if (document.body.clientWidth < 768) {
           </div
         </div>`;
 
-        const $closeWindow = document.querySelector(".info");
-        $closeWindow.addEventListener("click", () => {
-          $message.innerHTML = "";
+      const $closeWindow = document.querySelector(".info");
+      $closeWindow.addEventListener("click", () => {
+        $message.innerHTML = "";
+        $main.style.opacity = "1";
+      });
+
+      $main.style.opacity = "0.50";
+
+      const $movieIcons = document.querySelectorAll(".movie-message__icon");
+      $movieIcons.forEach((e) => {
+        e.addEventListener("click", () => {
+          if (document.querySelector(".movie-message")) {
+            $message.innerHTML = "";
+          }
+          $infoMessage.innerHTML = infoMessage;
           $main.style.opacity = "1";
-        });
 
-        $main.style.opacity = "0.50";
-
-        const $movieIcons = document.querySelectorAll(".movie-message__icon");
-        $movieIcons.forEach((e) => {
-          e.addEventListener("click", () => {
-            if (document.querySelector(".movie-message")) {
-              $message.innerHTML = "";
-            }
-            $infoMessage.innerHTML = infoMessage;
+          const $closeWindow = document.querySelector(".info.personal");
+          $closeWindow.addEventListener("click", () => {
+            $infoMessage.innerHTML = "";
             $main.style.opacity = "1";
-
-            const $closeWindow = document.querySelector(".info.personal");
-            $closeWindow.addEventListener("click", () => {
-              $infoMessage.innerHTML = "";
-              $main.style.opacity = "1";
-            });
           });
         });
+      });
 
-        if (
-          $profileMenu.classList.contains("active-menu") ||
-          $menu.classList.contains("active-menu")
-        ) {
-          $profileMenu.classList.remove("active-menu");
-          $menu.classList.remove("active-menu");
-          $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
-          $menu.classList.remove("animate__animated", "animate__fadeIn");
-          $main.style.removeProperty("opacity");
-        }
+      if (
+        $profileMenu.classList.contains("active-menu") ||
+        $menu.classList.contains("active-menu")
+      ) {
+        $profileMenu.classList.remove("active-menu");
+        $menu.classList.remove("active-menu");
+        $profileMenu.classList.remove("animate__animated", "animate__fadeIn");
+        $menu.classList.remove("animate__animated", "animate__fadeIn");
+        $main.style.removeProperty("opacity");
       }
-    });
+    }
   });
-} else {
-  function openMessage(arrayOfElements) {
-    const $infoMessage = document.querySelector(".message-info__container");
+});
 
-    arrayOfElements.forEach((e) => {
-      e.addEventListener("click", () => {
-        $infoMessage.innerHTML = infoMessage;
-        const $closeWindow = document.querySelector(".info.personal");
-        $closeWindow.addEventListener("click", () => {
-          $infoMessage.innerHTML = "";
-        });
+// Lógica para Desktop
+
+function openMessage(arrayOfElements) {
+  const $infoMessage = document.querySelector(".message-info__container");
+
+  arrayOfElements.forEach((e) => {
+    e.addEventListener("click", () => {
+      $infoMessage.innerHTML = infoMessage;
+      const $closeWindow = document.querySelector(".info.personal");
+      $closeWindow.addEventListener("click", () => {
+        $infoMessage.innerHTML = "";
       });
     });
-  }
-
-  const $movieCard_Overlay = document.querySelectorAll(
-    ".movie-card__overlay img"
-  );
-  openMessage($movieCard_Overlay);
-
-  const $asideButtons = document.querySelectorAll(".nav-item");
-  openMessage($asideButtons);
-
-  const $headerButtons = document.querySelectorAll(".profile-options img");
-  openMessage($headerButtons);
+  });
 }
+
+const $movieCard_Overlay = document.querySelectorAll(
+  ".movie-card__overlay img"
+);
+openMessage($movieCard_Overlay);
+
+const $asideButtons = document.querySelectorAll(".nav-item");
+openMessage($asideButtons);
+
+const $headerButtons = document.querySelectorAll(".profile-options img");
+openMessage($headerButtons);
