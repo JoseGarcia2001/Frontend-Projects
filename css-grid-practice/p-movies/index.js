@@ -37,12 +37,12 @@ const infoMessage = `
           <span class="info personal"></span>
           <h3>Oops!</h3>
           <p>
-          Hola! Soy Jose Garcia, el diseñador y maquetador de esta Web.<br />
+          Hola! Soy Jose Garcia, el diseñador y maquetador de esta Web.<br /> <br />
           Este es un sitio estático. Fué creado con fines educativos, sin embargo
-          gracias por visistarlo!<br />
+          ¡gracias por visitarlo!<br />
           <br />
-          Si quieres saber un poco más de mi, mis proyectos o contactarme, visita
-          mis redes sociales o bien el repo del proyecto para ver el código. 😄
+          Si quieres saber un poco más de mi, mis proyectos o contactarme. Visita
+          mis redes sociales o bien, el repositorio del proyecto para ver el código. 😄
         </p>
         <div class="images-container .media">
           <a href="https://www.linkedin.com/in/jose-gg/" target="_blank">
