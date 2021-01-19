@@ -28,11 +28,7 @@ class Game {
   }
 
   btnStartGame() {
-    if (btnEmpezar.classList.contains("hide")) {
-      btnEmpezar.classList.remove("hide");
-    } else {
-      btnEmpezar.classList.add("hide");
-    }
+    btnStart.classList.toggle("hide");
   }
 
   createSequence() {

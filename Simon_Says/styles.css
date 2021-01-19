@@ -21,6 +21,7 @@ header {
 
 .header__level {
   margin-right: 42px;
+  font-size: 50px;
 }
 
 header img {
@@ -92,6 +93,7 @@ h1 {
 }
 
 .btn-start {
+  cursor: pointer;
   font-family: "MuseoModerno", cursive;
   border-radius: 20px;
   border-color: transparent;
