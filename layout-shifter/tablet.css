@@ -1,0 +1,12 @@
+header {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+header ul {
+  margin: 0;
+}
+
+.side-bar article {
+  min-width: calc(50% - 0.8rem);
+}
