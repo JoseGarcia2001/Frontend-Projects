@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Movies</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      h1 {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .buttons-container {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .buttons-container button {
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .movie {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .movie h3 {
+        margin-bottom: 15px;
+      }
+
+      .movie div {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de las mejores películas</h1>
+    <div class="buttons-container">
+      <button id="sequence">Top 3 en sequencia</button>
+      <button id="at-the-time">Top 3 al tiempo</button>
+      <button id="race">Carrera entre las Top 3</button>
+    </div>
+    <div class="movies-container"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
